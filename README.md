@@ -1,4 +1,4 @@
-# NodeJS code style guide
+# Valle Web code style guide
 
 > The [Valle](https://github.com/valleweb) style guide.
 
