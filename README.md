@@ -8,6 +8,12 @@ Project inspired by [Bananacss](https://github.com/bananacss/banana-style-guide)
 
 <hr>
 
+## Contributing
+
+Find on our [issues](https://github.com/valleweb/valle-style-guide/issues/) the next steps of the project ;)
+<br>
+Want to contribute? [Follow these recommendations](https://github.com/valleweb/valle-style-guide/blob/master/CONTRIBUTING.md).
+
 ## License
 
 [MIT License](https://github.com/valleweb/valle-style-guide/blob/master/LICENSE.md) © [ValleWeb Team](https://github.com/valleweb)
