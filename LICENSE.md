@@ -1,6 +1,6 @@
 The MIT License (MIT)
 
-Copyright (c) 2017 [valleweb](https://github.com/valleweb)
+Copyright (c) 2018 [valleweb](https://github.com/valleweb)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
