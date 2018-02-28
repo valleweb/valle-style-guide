@@ -191,7 +191,7 @@
 
 ```html
 <!-- Good -->
-<script src="scripts.min.js"></script>
+  <script src="scripts.min.js"></script>
 </body>
 ```
 
@@ -217,3 +217,5 @@
 ## References
 
 Project inspired by [LFeh coding style](https://github.com/LFeh/coding-style/blob/master/README.md#html) and [Google HTML style guide](https://google.github.io/styleguide/htmlcssguide.html).
+
+### [<-- Back](https://github.com/valleweb/valle-style-guide)
