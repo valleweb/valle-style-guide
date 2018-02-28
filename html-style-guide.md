@@ -7,12 +7,12 @@
 *Always declare the document type as the first line in your document. Use lower case tags*
 
 ```html
-// Bad
+<!-- Bad -->
 <!DOCTYPE html>
 ```
 
 ```html
-// Good
+<!-- Good -->
 <!doctype html>
 ```
 
@@ -29,14 +29,14 @@
 *Always declare elements with lower case*
 
 ```html
-// Bad
+<!-- Bad -->
 <SECTION>
   <p>This is a paragraph.</p>
 </SECTION>
 ```
 
 ```html
-// Good
+<!-- Good -->
 <section>
   <p>This is a paragraph.</p>
 </section>
@@ -45,12 +45,12 @@
 ### Don't include a `/` in self-closing elements
 
 ```html
-// Bad
+<!-- Bad -->
 <img />
 ```
 
 ```html
-// Good
+<!-- Good -->
 <img>
 ```
 
@@ -59,13 +59,13 @@
 *You can configure your editor for this*
 
 ```html
-// Bad
+<!-- Bad -->
 <section>
     <p>This is a paragraph.</p>
 ```
 
 ```html
-// Good
+<!-- Good -->
 <section>
   <p>This is a paragraph.</p>
 ```
@@ -73,19 +73,19 @@
 ### Always use double quotes
 
 ```html
-// Bad
+<!-- Bad -->
 <div class='example'>
 ```
 
 ```html
-// Good
+<!-- Good -->
 <div class="example">
 ```
 
 ### Separate block element by a blank line and agroup the inners block elements
 
 ```html
-// Bad
+<!-- Bad -->
 <div class="block-a">
 
   <ul>
@@ -109,7 +109,7 @@
 ```
 
 ```html
-// Good
+<!-- Good -->
 <div class="block-a">
   <ul>
     <li></li>
@@ -133,19 +133,19 @@
 ### Always add the `alt` attribute to images
 
 ```html
-// Bad
+<!-- Bad -->
 <img src="exanple.png">
 ```
 
 ```html
-// Good
+<!-- Good -->
 <img src="example.png" alt="Attribute alt example">
 ```
 
 ### Always add the `title` tag to svg
 
 ```html
-// Bad
+<!-- Bad -->
 <svg width="500" height="300" xmlns="http://www.w3.org/2000/svg">
   <g>
     <rect x="10" y="10" width="200" height="50"
@@ -155,7 +155,7 @@
 ```
 
 ```html
-// Good
+<!-- Good -->
 <svg width="500" height="300" xmlns="http://www.w3.org/2000/svg">
   <g>
     <title>SVG Title Demo example</title>
@@ -168,13 +168,13 @@
 ### No need to specify a type when including CSS and JavaScript files as `text/css` and `text/JavaScript`
 
 ```html
-// Bad
+<!-- Bad -->
 <link rel="stylesheet" href="style.css" type="text/css">
 <script src="scripts.min.js" type="text/JavaScript"></script>
 ```
 
 ```html
-// Good
+<!-- Good -->
 <link rel="stylesheet" href="style.css">
 <script src="scripts.min.js"></script>
 ```
@@ -182,7 +182,7 @@
 ### All JavaScripts files must be at the end of the code, before closing the `<body>`
 
 ```html
-// Bad
+<!-- Bad -->
 <head>
   <script src="scripts.min.js"></script>
 </head>
@@ -190,7 +190,7 @@
 ```
 
 ```html
-// Good
+<!-- Good -->
 <script src="scripts.min.js"></script>
 </body>
 ```
