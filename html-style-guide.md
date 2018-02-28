@@ -213,3 +213,7 @@
 
 <img class="img-rounded" src="..." alt="...">
 ```
+
+## References
+
+Project inspired by [LFeh coding style](https://github.com/LFeh/coding-style/blob/master/README.md#html) and [Google HTML style guide](https://google.github.io/styleguide/htmlcssguide.html).
