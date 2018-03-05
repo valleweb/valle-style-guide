@@ -15,7 +15,7 @@ if ( true ) {
 
 ```js
 // Good
-if ( true ) {
+if (true) {
   console.log('True');
 }
 ```
@@ -31,7 +31,7 @@ if ( true ) {
 
 ```js
 // Good
-if ( true ) {
+if (true) {
   console.log('True');
 }
 ```
@@ -47,7 +47,7 @@ if ( true ) {
 
 ```js
 // Good
-if ( true ) {
+if (true) {
   console.log('True');
 }
 ```
@@ -66,7 +66,7 @@ else {
 
 ```js
 // Good
-if ( true ) {
+if (true) {
   console.log('True');
 } else {
   console.log('False');
@@ -169,6 +169,24 @@ function foo() {
 }
 ```
 
+### When you must use function expressions (as when passing an anonymous function), use `arrow function` notation
+
+```js
+// Bad
+[1, 2, 3].map(function (x) {
+  const y = x + 1;
+  return x * y;
+});
+```
+
+```js
+// Good
+[1, 2, 3].map((x) => {
+  const y = x + 1;
+  return x * y;
+});
+```
+
 ### Ternary operator
 
 *The ternary operator should not be used on a single line. Split it up into multiple lines instead*
@@ -183,6 +201,232 @@ const foo = (condition) ? 1 : 2;
 const foo = (condition)
   ? 1
   : 2;
+```
+
+### Use `const` for all of your references, avoid using `var`
+
+```js
+// Bad
+var foo = 'bar';
+```
+
+```js
+// Good
+const foo = 'bar';
+```
+
+### If you must reassign references, use `let` instead of `var`
+
+```js
+// Bad
+var count = 1;
+
+if (condition) {
+  count += 1;
+};
+```
+
+```js
+// Good
+let count = 'bar';
+
+if (condition) {
+  count += 1;
+};
+```
+
+### Declare one `const` or `let` per declaration statement
+
+```js
+// Bad
+const foo = require('./bar');
+      foo = require('./foo');
+```
+
+```js
+// Good
+const foo = require('./bar');
+const foo = require('./foo');
+```
+
+### Use the literal syntax for `object` creation
+
+```js
+// Bad
+const foo = new Object();
+```
+
+```js
+// Good
+const foo = {};
+```
+
+*x*
+
+```js
+// Bad
+const foo = {"good": 'code'
+        , is generally: 'pretty'
+        };
+```
+
+```js
+// Good
+const foo = {
+  good: 'code',
+  'is generally': 'pretty',
+};
+```
+
+### Use the literal syntax for `array` creation
+
+```js
+// Bad
+const foo = new Array();
+```
+
+```js
+// Good
+const foo = [];
+```
+
+*x*
+
+```js
+// Bad
+const foo = [
+  'hello', 'world'
+];
+```
+
+```js
+// Good
+const foo = ['hello', 'world'];
+```
+
+### Parentheses `()` and commas , are not followed by indented children on new lines
+
+```js
+// Bad
+foo.bar(
+  'string',
+  () => {
+    statements
+  }
+);
+```
+
+```js
+// Good
+foo.bar('string', () => {
+  statements
+});
+```
+
+### Method chaining
+
+```js
+// Bad
+user
+.findOne({ name: 'foo' })
+.populate('bar')
+.exec(function(err, user) {
+  return true;
+});
+
+// Bad
+user.findOne({ name: 'foo' })
+  .populate('bar')
+  .exec(function(err, user) {
+    return true;
+  });
+```
+
+```js
+// Good
+user
+  .findOne({ name: 'foo' })
+  .populate('bar')
+  .exec(function(err, user) {
+    return true;
+  });
+```
+
+### Use braces with all blocks
+
+```js
+// Bad
+if (condition) doSomething();
+
+while (condition) iterating++;
+```
+
+```js
+// Good
+if (condition) {
+  ...
+}
+
+while (condition) {
+  ...
+}
+```
+
+### Any non-trivial conditions should be assigned to a descriptively named variable or function
+
+```js
+// Bad
+if (password.length >= 4 && /^(?=.*\d).{4,}$/.test(password)) {
+  ...
+}
+```
+
+```js
+// Good
+const isValidPassword = password.length >= 4 && /^(?=.*\d).{4,}$/.test(password);
+
+if (isValidPassword) {
+  ...
+}
+```
+
+### Try to write comments that explain higher level mechanisms or clarify difficult segments of your code
+
+```js
+// Bad
+const foo = "var(--bar)";
+
+// Regexp
+if (foo.replace(/var\(/, "").replace(/\)/, "") === "--bar") {
+  ...
+}
+```
+
+```js
+// Good
+let foo = 'var(--bar)';
+
+let value = foo
+              .replace(/var\(/, '') // Remove the 'var('
+              .replace(/\)/, ''); // Remove the ')'
+
+if (foo === '--bar') {
+  ...
+}
+```
+
+### Don't use comments to trivial things
+
+```js
+// Bad
+
+// Create the AST
+const ast = css.parse('.a{color:#000;}');
+```
+
+```js
+// Good
+const ast = css.parse('.a{color:#000;}');
 ```
 
 ## References
