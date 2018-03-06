@@ -261,23 +261,6 @@ const foo = new Object();
 const foo = {};
 ```
 
-*x*
-
-```js
-// Bad
-const foo = {"good": 'code'
-        , is generally: 'pretty'
-        };
-```
-
-```js
-// Good
-const foo = {
-  good: 'code',
-  'is generally': 'pretty',
-};
-```
-
 ### Use the literal syntax for `array` creation
 
 ```js
@@ -290,7 +273,7 @@ const foo = new Array();
 const foo = [];
 ```
 
-*x*
+### Declare the `array` itens inline
 
 ```js
 // Bad
