@@ -477,7 +477,7 @@ const Component = () => {
 export default Component;
 ```
 
-### Props name
+### Props
 
 *Always create props with different names than the DOM props*
 
@@ -507,7 +507,49 @@ export default Component;
 <Component myProp="test" />
 ```
 
+*Always omit the value of the prop when it is explicity `true`*
+
+```js
+// Bad
+
+<Component myProp={ true } />
+```
+
+```js
+// Good
+
+<Component myProp />
+```
+
 ### Spacing
+
+*Always include a single space in your self-closing tag*
+
+```js
+// Bad
+
+<Component/>
+```
+
+```js
+// Good
+
+<Component />
+```
+
+*Always pad JSX curly braces with spaces*
+
+```js
+// Bad
+
+<Component myProp={name}/>
+```
+
+```js
+// Good
+
+<Component myProp={ name }/>
+```
 
 ## References
 
