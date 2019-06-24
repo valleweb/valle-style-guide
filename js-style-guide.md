@@ -553,6 +553,6 @@ export default Component;
 
 ## References
 
-Project inspired by [Banana CSS](https://github.com/bananacss/banana-style-guide) and [LFeh coding style](https://github.com/LFeh/coding-style#js).
+Project inspired by [Banana CSS](https://github.com/bananacss/banana-style-guide), [LFeh coding style](https://github.com/LFeh/coding-style#js) and [Airbnb React Style Guide](https://github.com/airbnb/javascript/tree/master/react).
 
 ### [<-- Back](https://github.com/valleweb/valle-style-guide)
