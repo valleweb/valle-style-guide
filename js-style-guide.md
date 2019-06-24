@@ -9,7 +9,7 @@
 ```js
 // Bad
 if ( true ) {
-    console.log('True');
+  console.log('True');
 }
 ```
 
@@ -25,7 +25,7 @@ if (true) {
 ```js
 // Bad
 if ( true ) {
-    console.log('True')
+  console.log('True')
 }
 ```
 
@@ -390,8 +390,8 @@ if (foo.replace(/var\(/, "").replace(/\)/, "") === "--bar") {
 let foo = 'var(--bar)';
 
 let value = foo
-              .replace(/var\(/, '') // Remove the 'var('
-              .replace(/\)/, ''); // Remove the ')'
+            .replace(/var\(/, '') // Remove the 'var('
+            .replace(/\)/, ''); // Remove the ')'
 
 if (foo === '--bar') {
   ...
@@ -412,8 +412,147 @@ const ast = css.parse('.a{color:#000;}');
 const ast = css.parse('.a{color:#000;}');
 ```
 
+## React
+
+> Follow the [HTML Guide](https://github.com/valleweb/valle-style-guide/blob/master/html-style-guide.md) except for the rules bellow.
+
+### Always use stateless components
+
+```js
+// Bad
+
+class Component extends React.Component {
+  render () {
+    return <h1>.</h1>
+  }
+}
+```
+
+```js
+// Good
+
+const Component = () => {
+  return <h1>.</h1>
+}
+```
+
+### Mixins
+
+*Don't use*
+
+### Naming
+
+*Always use PascalCase for React components*
+
+```js
+// Bad
+
+import componentTest from './ComponentTest';
+import componenttest from './ComponentTest';
+```
+
+```js
+// Good
+
+import ComponentTest from './ComponentTest';
+```
+
+### Export component
+
+```js
+// Bad
+
+export default function Component() {
+  return <h1>.</h1>
+}
+```
+
+```js
+// Good
+
+const Component = () => {
+  return <h1>.</h1>
+}
+
+export default Component;
+```
+
+### Props
+
+*Always create props with different names than the DOM props*
+
+```js
+// Bad
+
+<Component style="test" />
+```
+
+```js
+// Good
+
+<Component myProp="test" />
+```
+
+*Always use camelCase for prop names*
+
+```js
+// Bad
+
+<Component my_prop="test" />
+```
+
+```js
+// Good
+
+<Component myProp="test" />
+```
+
+*Always omit the value of the prop when it is explicity `true`*
+
+```js
+// Bad
+
+<Component myProp={ true } />
+```
+
+```js
+// Good
+
+<Component myProp />
+```
+
+### Spacing
+
+*Always include a single space in your self-closing tag*
+
+```js
+// Bad
+
+<Component/>
+```
+
+```js
+// Good
+
+<Component />
+```
+
+*Always pad JSX curly braces with spaces*
+
+```js
+// Bad
+
+<Component myProp={name}/>
+```
+
+```js
+// Good
+
+<Component myProp={ name }/>
+```
+
 ## References
 
-Project inspired by [Banana CSS](https://github.com/bananacss/banana-style-guide) and [LFeh coding style](https://github.com/LFeh/coding-style#js).
+Project inspired by [Banana CSS](https://github.com/bananacss/banana-style-guide), [LFeh coding style](https://github.com/LFeh/coding-style#js) and [Airbnb React Style Guide](https://github.com/airbnb/javascript/tree/master/react).
 
 ### [<-- Back](https://github.com/valleweb/valle-style-guide)

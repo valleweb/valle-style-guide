@@ -44,6 +44,8 @@
 
 ### Don't include a `/` in self-closing elements
 
+*Except for the react elements*
+
 ```html
 <!-- Bad -->
 <img />
@@ -193,6 +195,23 @@
 <!-- Good -->
   <script src="scripts.min.js"></script>
 </body>
+```
+
+### Break long lines
+
+```html
+<!-- Bad -->
+<input id="input" class="input" type="text" placeholder="Input">
+```
+
+```html
+<!-- Good -->
+<input
+  id="input"
+  class="input"
+  type="text"
+  placeholder="Input"
+>
 ```
 
 ### HTML Attribute Order
