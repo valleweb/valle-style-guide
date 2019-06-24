@@ -414,7 +414,7 @@ const ast = css.parse('.a{color:#000;}');
 
 ## React
 
-> Follow the [HTML Guide](https://github.com/valleweb/valle-style-guide/blob/master/html-style-guide.md) except for the rules bellow
+> Follow the [HTML Guide](https://github.com/valleweb/valle-style-guide/blob/master/html-style-guide.md) except for the rules bellow.
 
 ### Always use stateless components
 
