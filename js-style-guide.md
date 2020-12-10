@@ -4,7 +4,7 @@
 
 ### Soft tabs with two spaces
 
-*You can configure your editor for this*
+*You can configure your editor for this. Eslint: [space-in-parens](https://eslint.org/docs/rules/space-in-parens)*
 
 ```js
 // Bad
@@ -22,6 +22,8 @@ if (true) {
 
 ### Always use semicolons
 
+*Eslint: [semi](https://eslint.org/docs/rules/semi)*
+
 ```js
 // Bad
 if ( true ) {
@@ -38,6 +40,8 @@ if (true) {
 
 ### Always use single quotes
 
+*Eslint: [quotes](https://eslint.org/docs/rules/quotes)*
+
 ```js
 // Bad
 if ( true ) {
@@ -53,6 +57,8 @@ if (true) {
 ```
 
 ### Keep else in the same line of closure of the `if`
+
+*Eslint: [brace-style](https://eslint.org/docs/2.0.0/rules/brace-style)*
 
 ```js
 // Bad
@@ -75,6 +81,8 @@ if (true) {
 
 ### Add spaces between operators
 
+*Eslint: [space-infix-ops](https://eslint.org/docs/rules/space-infix-ops)*
+
 ```js
 // Bad
 for (i=0;i<10;i++) {
@@ -91,7 +99,7 @@ for (i = 0; i < 10; i++) {
 
 ### Avoid single letter names
 
-*Be descriptive with your naming*
+*Be descriptive with your naming. Eslint: [id-length](https://eslint.org/docs/rules/id-length)*
 
 ```js
 // Bad
@@ -109,6 +117,8 @@ function query() {
 
 ### Use lowerCamelCase
 
+*Eslint: [camelcase](https://eslint.org/docs/rules/camelcase)*
+
 ```js
 // Bad
 let is_error;
@@ -120,6 +130,8 @@ let isError;
 ```
 
 ### Use the === operator
+
+*Eslint: [eqeqeq](https://eslint.org/docs/rules/eqeqeq)*
 
 ```js
 // Bad
@@ -141,6 +153,8 @@ if (example === 15) {
 
 ### Add spaces outside parentheses `()` but avoid it inside
 
+*Eslint: [keyword-spacing](https://eslint.org/docs/rules/keyword-spacing)*
+
 ```js
 // Bad
 if(condition){
@@ -157,6 +171,8 @@ if (condition) {
 
 ### Use function declarations instead of function expressions
 
+*Eslint: [func-style](https://eslint.org/docs/rules/func-style)*
+
 ```js
 // Bad
 const foo = function () {
@@ -170,6 +186,8 @@ function foo() {
 ```
 
 ### When you must use function expressions (as when passing an anonymous function), use `arrow function` notation
+
+*Eslint: [func-style](https://eslint.org/docs/rules/func-style)*
 
 ```js
 // Bad
@@ -189,7 +207,7 @@ function foo() {
 
 ### Ternary operator
 
-*The ternary operator should not be used on a single line. Split it up into multiple lines instead*
+*The ternary operator should not be used on a single line. Split it up into multiple lines instead. Eslint: [no-nested-ternay](https://eslint.org/docs/rules/no-nested-ternary)*
 
 ```js
 // Bad
@@ -205,6 +223,8 @@ const foo = (condition)
 
 ### Use `const` for all of your references, avoid using `var`
 
+*Eslint: [no-var](https://eslint.org/docs/rules/no-var)*
+
 ```js
 // Bad
 var foo = 'bar';
@@ -216,6 +236,8 @@ const foo = 'bar';
 ```
 
 ### If you must reassign references, use `let` instead of `var`
+
+*Eslint: [no-var](https://eslint.org/docs/rules/no-var)*
 
 ```js
 // Bad
@@ -237,6 +259,8 @@ if (condition) {
 
 ### Declare one `const` or `let` per declaration statement
 
+*Eslint: [one-var](https://eslint.org/docs/rules/one-var)*
+
 ```js
 // Bad
 const foo = require('./bar');
@@ -251,6 +275,8 @@ const foo = require('./foo');
 
 ### Use the literal syntax for `object` creation
 
+*Eslint: [no-new-object](https://eslint.org/docs/rules/no-new-object)*
+
 ```js
 // Bad
 const foo = new Object();
@@ -263,6 +289,8 @@ const foo = {};
 
 ### Use the literal syntax for `array` creation
 
+*Eslint: [no-array-constructuor](https://eslint.org/docs/rules/no-array-constructor)*
+
 ```js
 // Bad
 const foo = new Array();
@@ -274,6 +302,8 @@ const foo = [];
 ```
 
 ### Declare the `array` itens inline
+
+*Eslint: [array-element-newline](https://eslint.org/docs/rules/array-element-newline)*
 
 ```js
 // Bad
@@ -288,6 +318,8 @@ const foo = ['hello', 'world'];
 ```
 
 ### Parentheses `()` and commas , are not followed by indented children on new lines
+
+*Eslint: [function-paren-newline](https://eslint.org/docs/rules/function-paren-newline)*
 
 ```js
 // Bad
@@ -307,6 +339,8 @@ foo.bar('string', () => {
 ```
 
 ### Method chaining
+
+*Eslint: [newline-per-chianed-call](https://eslint.org/docs/rules/newline-per-chained-call)*
 
 ```js
 // Bad
@@ -336,6 +370,8 @@ user
 ```
 
 ### Use braces with all blocks
+
+*Eslint: [curly](https://eslint.org/docs/rules/curly)*
 
 ```js
 // Bad
